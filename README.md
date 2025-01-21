@@ -55,27 +55,9 @@ Next App directory with [React Server Component](https://nextjs.org/docs/getting
 6. Added a blog post
 7. Deployed on Vercel
 
-## Installation
-
-```bash
-yarn
-```
-
-Please note, that if you are using Windows, you may need to run:
-
-```bash
-$env:PWD = $(Get-Location).Path
-```
-
 ## Development
 
-First, run the development server:
-
-```bash
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+devcontainer runs and opens [http://localhost:3000](http://localhost:3000)
 
 Edit the layout in `app` or content in `data`. With live reloading, the pages auto-updates as you edit them.
 
@@ -89,21 +71,21 @@ Edit the layout in `app` or content in `data`. With live reloading, the pages au
 
 `data/headerNavLinks.js` - navigation links.
 
-`data/logo.svg` - replace with your own logo.
+`data/logo.svg` - logo.
 
-`data/blog` - replace with your own blog posts.
+`data/blog` - blog posts.
 
 `public/static` - store assets such as images and favicons.
 
 `tailwind.config.js` and `css/tailwind.css` - tailwind configuration and stylesheet which can be modified to change the overall look and feel of the site.
 
-`css/prism.css` - controls the styles associated with the code blocks. Feel free to customize it and use your preferred prismjs theme e.g. [prism themes](https://github.com/PrismJS/prism-themes).
+`css/prism.css` - controls the styles associated with the code blocks. Customizeable to preferred prismjs theme e.g. [prism themes](https://github.com/PrismJS/prism-themes).
 
 `contentlayer.config.ts` - configuration for Contentlayer, including definition of content sources and MDX plugins used. See [Contentlayer documentation](https://www.contentlayer.dev/docs/getting-started) for more information.
 
 `components/MDXComponents.js` - pass your own JSX code or React component by specifying it over here. You can then use them directly in the `.mdx` or `.md` file. By default, a custom link, `next/image` component, table of contents component and Newsletter form are passed down. Note that the components should be default exported to avoid [existing issues with Next.js](https://github.com/vercel/next.js/issues/51593).
 
-`layouts` - main templates used in pages:
+`layouts` - main used in pages:
 
 - There are currently 3 post layouts available: `PostLayout`, `PostSimple` and `PostBanner`. `PostLayout` is the default 2 column layout with meta and author information. `PostSimple` is a simplified version of `PostLayout`, while `PostBanner` features a banner image.
 - There are 2 blog listing layouts: `ListLayout`, the layout used in version 1 of the template with a search bar and `ListLayoutWithTags`, currently used in version 2, which omits the search bar but includes a sidebar with information on the tags.
@@ -114,7 +96,7 @@ Edit the layout in `app` or content in `data`. With live reloading, the pages au
 
 ## Post
 
-Content is modelled using [Contentlayer](https://www.contentlayer.dev/), which allows you to define your own content schema and use it to generate typed content objects. See [Contentlayer documentation](https://www.contentlayer.dev/docs/getting-started) for more information.
+Content is modelled using [Contentlayer](https://www.contentlayer.dev/), define content schema and use it to generate typed content objects. See [Contentlayer documentation](https://www.contentlayer.dev/docs/getting-started) for more information.
 
 ### Frontmatter
 
@@ -139,16 +121,16 @@ Here's an example of a post's frontmatter:
 
 ```
 ---
-title: 'Introducing Tailwind Nexjs Starter Blog'
-date: '2021-01-12'
+title: 'Starter Blog'
+date: '2025-01-20'
 lastmod: '2021-01-18'
 tags: ['next-js', 'tailwind', 'guide']
 draft: false
-summary: 'Looking for a performant, out of the box template, with all the best in web technology to support your blogging needs? Checkout the Tailwind Nextjs Starter Blog template.'
-images: ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.jpg']
+summary: 'A performant Stsarter Blog.'
+images: ['/static/images/blog-pic.jpg', '/static/images/blog-pic-2.jpg']
 authors: ['default', 'sparrowhawk']
 layout: PostLayout
-canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-tailwind-nextjs-starter-blog
+canonicalUrl: https://frankcarv.com/blog/
 ---
 ```
 
@@ -156,8 +138,6 @@ canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/introducing-t
 
 ### Vercel
 
-The easiest way to deploy the template is to deploy on [Vercel](https://vercel.com). Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy is on [Vercel](https://vercel.com). The [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-Showcase your projects with a hero image (16 x 9)
-
-[MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/LICENSE) © [Timothy Lin](https://www.timlrx.com)
+Showcase projects with a hero image (16 x 9 - 1920 x 1080)
