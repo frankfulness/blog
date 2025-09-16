@@ -6,46 +6,68 @@ draft: false
 summary: 'Utilize Sketchybar and Aerospace to replace MacOS default menu/statusbar & have a i3-like tiling window manager.'
 ---
 
-# Introduction
+# 👋🏻 Introduction
 
-Sketchybar and Aerospace, ever heard of either? Call it an over 30 years old male midlife crisis, but I've finally entered my era of pde (personal development environment) base desires.
+**_Sketchybar_** and **_Aerospace_**, ever heard of either? Call it an over 30 year old recent birthday derived male _midlife crisis_, but I've finally entered my PDE era(personal development environment) base desires.
 
 What happened to me? I watched Pewdie Pie's Arch Linux YouTube video, fell down the Alice and Wonderland pit of despair, and decided that I refuse to not rice up my machine as if I was on Linux.
 
-Things that annoy me about MacOS out the box:
+![](/static/images/messy.jpg)
 
-1. Windows are a pain and the animations when cmd+tab to an app feels like my eyes are getting sucked through a vortex I didn't sign up for, like listening to a friend's uncle rant about something I never agreed to get into.
-2. cmd+tab, I feel like I'm in the dark ages, is there no way to get to what I want to faster? Ofc, I've just been living in caveland normie land.
-3. Menubar customization is about as customizeable as if you like dark or light, what is this? SMH, facepalm, _deep sigh_, is a little pep in my step too much to ask for, I want some color.
-4. I just don't want to see every tray icon of everything and their grandmother at the top of my screen ok?
+###  **Things that annoy me about MacOS out the box:**
+
+1. Windows management is a pain and the animations when cmd+tab to another app in a different window feels like my eyes are getting sucked through a vortex I didn't sign up for, like listening to a friend's uncle rant about something I never agreed to get into.
+2. `cmd+tab`, I feel like I'm in the _dark ages_, is there no way to get to what I want to faster? Of course there is, I've just been living in caveland normie land under a gemstone crab.
+3. Menubar customization is about as customizeable as a pet rock pick your fancy: dark or light, what is this? SMH, facepalm, _deep sigh_, is a little pep in my step too much to ask for? I want some color.
+4. I don't want to see every tray icon of everything and their grandnode at the top of my screen ok?
 5. The options to see in an application menu dropdowns is great, but once you learn it, you don't need to see it, it's just clutter. Why isn't this as easy to toggle on/off as it is to hide and show .files I have no idea.
 
 Ok, overall I love MacOS. It's reliable, smooth, a buttery experience, almost everything works on it, and as far as new machines go at any new role I ask for it over a piece of dell potato in slow degrative decline 8/8 times.
 But, microanimations aren't for everything and at the end of the day I want my tools to work great and get out of my way when I want them so, enter solution!
 
-### Sketchybar
+## 🥷🏻 Sketchybar
 
 [Sketchybar for the sick](https://github.com/FelixKratz/SketchyBar)
 
-just look up some of the setups in "Share you setups" and you will instantly realize how little you have been rizzing or ricing up your Mac.
+Look up some of the setups in "Share you setups" and you will find some inspiration to rice up your Mac. We will come back to this setup after Aerospace because there is a lot going on here.
 
-### Aerospace
+## 🛸 Aerospace
 
 [Aerospace for Andys'](https://github.com/nikitabobko/AeroSpace)
 
 It's i3 like buttery and smooth, free of massive swooping animations and simple to use with `alt+<number>`, `alt+shift+<number>` to assign, & you don't lose `cmd+tab` if you want to fall back into bad habits.
 
-## Let's dive into setting it up
+### 🏗️ Let's dive into setting it up
 
 Nowadays with Warp terminal + Claude 4 sonnet, we can vibe our way through our own configurations without even leaving the terminal (it's weird to call warp a terminal tbh...).
 
 So, it's easy to agent our way through some of the base installation always using **Homebrew** (any surprise there? Nope), and then once we're saradomin brewed up and ready to take some hits, we can see what happens.
 
-in `.config` mkdirnolds your way to a toml config file via `mkdir aerospace && touch aerospace/aerospace.toml`
+in `.config` mkdirnolds your way to a toml config file via
+
+```bash
+mkdir aerospace && touch aerospace/aerospace.toml
+```
 
 Here is where we can set things like `start-at-login = true`, 'accordion-padding', 'default-root-container-layout', & more.
 
-Here's my basic one:
+Mine is rather simple with an emoji and machine name with `System Preferences`, `Activity Monitor`, & `Lock Screen` quickly accessible:
+
+![](/static/images/sketchy-aerospace.png)
+
+Along with having a nice little spotify plugin to hover over a mic which shows the current song playing and has simple default controls:
+
+![](/static/images/sketchy-spotify.png)
+
+And ensuring that Dato my calendar/time zone application is still clickable, along with some basic icons like battery, volume, WiFi/Ethernet connection, Bluetooth, & do not disturb toggle.
+
+![](/static/images/sketchy-dato)
+
+Overall I'd say it doesn't look to bad and matches my custom warp terminal config
+
+![](/static/images/sketchy-warp)
+
+Here's my basic aerospace toml:
 
 ```toml:aerospace.toml
 # Start AeroSpace at login
@@ -173,7 +195,90 @@ Not bad right? Feel free to configure yours however you want.
 However, you're going to need Sketchybar to bring this all together...
 My sketchybar setup has `colors`, `helpers`, `items`, `plugins`, and scripts like `colors.sh` & `icons.sh`, but most importantly is your `sketchybarrc`.
 
-I attempted to include a color script for warp inspired cololr pallette with proper transparency and this got yoinked.
-But the key is you will want to install [sketchybar-app-font](https://github.com/kvndrsslr/sketchybar-app-font) if you want to have a ligature based symbol font inspired by simple bar.
+So you're best looking here [my dotfiles on GitHub](https://github.com/frankfulness/dotfiles) if you want to see my slop.
 
-![sketchy sketchybar implementation](/static/images/sketchybar.png)
+I attempted to include a a few different scripts but the usage of some of this got yoinked.
+
+**_However_** you will want to take a look and potentially install [sketchybar-app-font](https://github.com/kvndrsslr/sketchybar-app-font) if you want to have a ligature based symbol font inspired by simple bar.
+
+![](/static/images/sketchybar.png)
+
+### 🚀 Zsh aliases for fun
+
+Now, what's nice is if you do need to go back to MacOS menu for whatever reason, why not just have some quick aliases for just that.
+
+```bash
+showsketchy
+```
+
+will hide MacOS Menu/status bar and show sketchy
+
+```bash
+showmac
+```
+
+will do the opposite.
+
+```bash
+alias showsketchy='
+echo "Switching to sketchybar..."
+# Method 1: Standard defaults
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+# Method 2: Auto-hide menu bar in all spaces
+defaults write com.apple.dock autohide-menu-bar -bool true
+# Method 3: Use AppleScript to hide menu bar immediately
+osascript -e "tell application \"System Preferences\" to quit"
+osascript -e "
+tell application \"System Events\"
+    tell dock preferences
+        set properties to {autohide menu bar: true}
+    end tell
+end tell
+"
+# Kill relevant processes to apply changes
+killall SystemUIServer 2>/dev/null
+killall Dock 2>/dev/null
+# Wait for changes to apply
+sleep 2
+# Start sketchybar
+brew services start felixkratz/formulae/sketchybar
+sleep 2
+echo "Sketchybar active with menu bar hidden!"
+'
+
+alias showmac='
+echo "Switching to macOS menu bar..."
+# Stop sketchybar first
+brew services stop felixkratz/formulae/sketchybar
+sleep 1
+# Restore menu bar using multiple methods
+defaults write NSGlobalDomain _HIHideMenuBar -bool false
+defaults write com.apple.dock autohide-menu-bar -bool false
+# Use AppleScript to show menu bar
+osascript -e "
+tell application \"System Events\"
+    tell dock preferences
+        set properties to {autohide menu bar: false}
+    end tell
+end tell
+"
+# Apply changes
+killall SystemUIServer 2>/dev/null
+killall Dock 2>/dev/null
+sleep 1
+echo "macOS menu bar restored!"
+'
+```
+
+## 🏁 Fin
+
+Thanks for putting up with my rough drafts being published on first shot, that I threw together in less than an hour... 😅
+But, it's always fun to share something I'm doing and the plan is to start posting more blogs as I've got over 8 years worth of ridiculousness to share. People will always like or hate stuff I say or post so who cares.
+
+So ¯\_(ツ)\_/¯
+
+Please HMU if you have any questions or need anything.
+
+Cheers! 🍻
+
+- Valiant ⚔️
