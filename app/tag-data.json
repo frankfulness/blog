@@ -1,5 +1,9 @@
 {
+  "pde": 1,
+  "tooling": 1,
+  "experiments": 1,
+  "macos": 1,
+  "gitops": 1,
   "markdown": 2,
-  "code": 1,
-  "gitops": 1
+  "code": 1
 }
